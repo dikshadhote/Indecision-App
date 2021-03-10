@@ -1,33 +1,29 @@
 "use strict";
 
+//app object
+var app = {
+    title: "Web Development",
+    subtitle: "By Diksha Dhote"
+};
 var template = React.createElement(
     "div",
     null,
     React.createElement(
         "h1",
         null,
-        "Indecision app"
+        app.title
     ),
     React.createElement(
         "p",
         null,
-        "checking the system"
-    ),
-    React.createElement(
-        "ol",
-        null,
-        React.createElement(
-            "li",
-            null,
-            "one"
-        ),
-        React.createElement(
-            "li",
-            null,
-            "two"
-        )
+        app.subtitle
     )
 );
+
+// Assignment :
+//create app object title/subtitle attributes
+//add title/subtitle in template
+//render template
 
 //using ARRAY
 var user = {
@@ -58,4 +54,4 @@ var templateTwo = React.createElement(
     )
 );
 var appRoot = document.getElementById('app');
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);

@@ -1,15 +1,20 @@
-
+//app object
+var app={
+    title:"Web Development",
+    subtitle:"By Diksha Dhote"
+};
 var template=
 (
 <div>
-    <h1>Indecision app</h1>
-    <p>checking the system</p>
-    <ol>
-        <li>one</li>
-        <li>two</li>
-    </ol>
+    <h1>{app.title}</h1>
+    <p>{app.subtitle}</p>
 </div>
 ); 
+
+// Assignment :
+//create app object title/subtitle attributes
+//add title/subtitle in template
+//render template
 
 //using ARRAY
 var user={
@@ -17,6 +22,8 @@ var user={
     userAge:"25",
     userLocation:"London,UK"
 };
+
+
  
 var templateTwo=
 (
@@ -27,4 +34,4 @@ var templateTwo=
 </div>
 );
 var appRoot=document.getElementById('app');
-ReactDOM.render(templateTwo,appRoot) 
+ReactDOM.render(template,appRoot) 
