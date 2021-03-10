@@ -40,7 +40,7 @@ function getLocation(Location)
 (
 <div>
 <h1>{user.userName ? user.userName : 'Anonymous'}</h1>
-<p>Age : {(user.userAge && user.userAge>18)&& user.userAge}</p>
+ {(user.userAge && user.userAge>=18)&& <p>Age : {user.userAge}</p>}
 {getLocation(user.userLocation)}
 </div>
 );
