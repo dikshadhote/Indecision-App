@@ -15,7 +15,7 @@ var template=
 
 var user={
     userName :"Diksha Dhote",
-    userAge:"25",
+    userAge: 23,
     userLocation:"London,UK"
 };
 
@@ -33,14 +33,14 @@ function getLocation(Location)
 
 }
 
- //second task : checking username with the help of ternary operator  {condition=true ? " execute this" : "else this will be executed" }
-// { true ? 'Andrew' : 'Anonymous' }  //op: Andrew    in this case if userName is present then true
-// { false ? 'Andrew' : 'Anonymous'} //op: Anonymous
+ //Third task : If userAge >= 18 then print age 
+ //How Logical And works ?
+ //if one of the two condition is false then logical And value is false 
  var templateTwo=
 (
 <div>
 <h1>{user.userName ? user.userName : 'Anonymous'}</h1>
-<p>Age : {user.userAge}</p>
+<p>Age : {(user.userAge && user.userAge>18)&& user.userAge}</p>
 {getLocation(user.userLocation)}
 </div>
 );
