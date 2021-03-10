@@ -37,17 +37,19 @@ function getLocation(Location) {
         null,
         "Location :",
         Location
-    );else return "Anonymous";
+    );else return "Unknown";
 }
 
-//First render location with help of function 
+//second task : checking username with the help of ternary operator  {condition=true ? " execute this" : "else this will be executed" }
+// { true ? 'Andrew' : 'Anonymous' }  //op: Andrew    in this case if userName is present then true
+// { false ? 'Andrew' : 'Anonymous'} //op: Anonymous
 var templateTwo = React.createElement(
     "div",
     null,
     React.createElement(
         "h1",
         null,
-        user.userName
+        user.userName ? user.userName : 'Anonymous'
     ),
     React.createElement(
         "p",
