@@ -1,9 +1,14 @@
 "use strict";
 
-//app object
+// In assignment:
+//task 1: render the subtitle (and p tag ) if subtitle exists -logical And operator
+// task 2: add options array in app object
+//render another p below subtitle tag - if options.length >0 display " here are your options" "No options" -ternary
+
 var app = {
     title: "Web Development",
-    subtitle: "By Diksha Dhote"
+    subtitle: "By Diksha Dhote",
+    options: ['One', 'Two']
 };
 var template = React.createElement(
     "div",
@@ -13,10 +18,29 @@ var template = React.createElement(
         null,
         app.title
     ),
-    React.createElement(
+    app.subtitle && React.createElement(
         "p",
         null,
         app.subtitle
+    ),
+    React.createElement(
+        "p",
+        null,
+        app.options.length > 0 ? 'here are your options ' : " No options"
+    ),
+    React.createElement(
+        "ol",
+        null,
+        React.createElement(
+            "li",
+            null,
+            app.options[0]
+        ),
+        React.createElement(
+            "li",
+            null,
+            app.options[1]
+        )
     )
 );
 
@@ -25,11 +49,6 @@ var user = {
     userAge: 23,
     userLocation: "London,UK"
 };
-
-// In this Lesson :
-//use of ternary operator to choose btween one option
-//use of Logical And to check both condition being true and print true statement
-//get value using function 
 
 function getLocation(Location) {
     if (Location) return React.createElement(
@@ -40,9 +59,6 @@ function getLocation(Location) {
     );else return "Unknown";
 }
 
-//Third task : If userAge >= 18 then print age 
-//How Logical And works ?
-//if one of the two condition is false then logical And value is false 
 var templateTwo = React.createElement(
     "div",
     null,
@@ -60,4 +76,4 @@ var templateTwo = React.createElement(
     getLocation(user.userLocation)
 );
 var appRoot = document.getElementById('app');
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);

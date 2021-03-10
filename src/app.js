@@ -1,13 +1,24 @@
-//app object
+
+// In assignment:
+//task 1: render the subtitle (and p tag ) if subtitle exists -logical And operator
+// task 2: add options array in app object
+//render another p below subtitle tag - if options.length >0 display " here are your options" "No options" -ternary
+
 var app={
     title:"Web Development",
-    subtitle:"By Diksha Dhote"
+    subtitle:"By Diksha Dhote",
+    options :['One','Two']
 };
 var template=
 (
 <div>
     <h1>{app.title}</h1>
-    <p>{app.subtitle}</p>
+    {(app.subtitle)&&<p>{app.subtitle}</p>}
+    <p>{app.options.length>0 ?'here are your options ':" No options"}</p>
+    <ol>
+        <li>{app.options[0]}</li>
+        <li>{app.options[1]}</li>
+    </ol>
 </div>
 ); 
 
@@ -19,10 +30,7 @@ var user={
     userLocation:"London,UK"
 };
 
-// In this Lesson :
-//use of ternary operator to choose btween one option
-//use of Logical And to check both condition being true and print true statement
-//get value using function 
+
 
 function getLocation(Location)
 {
@@ -33,9 +41,7 @@ function getLocation(Location)
 
 }
 
- //Third task : If userAge >= 18 then print age 
- //How Logical And works ?
- //if one of the two condition is false then logical And value is false 
+ 
  var templateTwo=
 (
 <div>
@@ -45,4 +51,4 @@ function getLocation(Location)
 </div>
 );
 var appRoot=document.getElementById('app');
-ReactDOM.render(templateTwo,appRoot) 
+ReactDOM.render(template,appRoot) 
