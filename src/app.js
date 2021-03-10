@@ -11,16 +11,19 @@ var template=
 </div>
 ); 
 
-//Dynamic 
-var userName ="Diksha Dhote";
-var userAge=23;
-var userLocation="Mumbai";
+//using ARRAY
+var user={
+    userName :"Diksha Dhote",
+    userAge:"25",
+    userLocation:"London,UK"
+};
+ 
 var templateTwo=
 (
 <div>
-<h1>{userName}</h1>
-<p>Age : {userAge}</p>
-<p>Location : {userLocation}</p>
+<h1>{user.userName}</h1>
+<p>Age : {user.userAge}</p>
+<p>Location : {user.userLocation}</p>
 </div>
 );
 var appRoot=document.getElementById('app');

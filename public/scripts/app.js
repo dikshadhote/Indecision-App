@@ -29,29 +29,32 @@ var template = React.createElement(
     )
 );
 
-//Dynamic 
-var userName = "Diksha Dhote";
-var userAge = 23;
-var userLocation = "Mumbai";
+//using ARRAY
+var user = {
+    userName: "Diksha Dhote",
+    userAge: "25",
+    userLocation: "London,UK"
+};
+
 var templateTwo = React.createElement(
     "div",
     null,
     React.createElement(
         "h1",
         null,
-        userName
+        user.userName
     ),
     React.createElement(
         "p",
         null,
         "Age : ",
-        userAge
+        user.userAge
     ),
     React.createElement(
         "p",
         null,
         "Location : ",
-        userLocation
+        user.userLocation
     )
 );
 var appRoot = document.getElementById('app');
