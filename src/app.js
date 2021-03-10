@@ -11,27 +11,36 @@ var template=
 </div>
 ); 
 
-// Assignment :
-//create app object title/subtitle attributes
-//add title/subtitle in template
-//render template
 
-//using ARRAY
+
 var user={
     userName :"Diksha Dhote",
     userAge:"25",
     userLocation:"London,UK"
 };
 
+// In this Lesson :
+//use of ternary operator to choose btween one option
+//use of Logical And to check both condition being true and print true statement
+//get value using function 
 
- 
+function getLocation(Location)
+{
+    if(Location)
+       return  <p>Location :{Location}</p>
+    else
+       return "Anonymous";
+
+}
+
+ //First render location with help of function 
 var templateTwo=
 (
 <div>
 <h1>{user.userName}</h1>
 <p>Age : {user.userAge}</p>
-<p>Location : {user.userLocation}</p>
+{getLocation(user.userLocation)}
 </div>
 );
 var appRoot=document.getElementById('app');
-ReactDOM.render(template,appRoot) 
+ReactDOM.render(templateTwo,appRoot) 
