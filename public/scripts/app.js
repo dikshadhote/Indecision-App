@@ -1,52 +1,57 @@
-'use strict';
+"use strict";
 
 var template = React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-        'h1',
+        "h1",
         null,
-        'Indecision app'
+        "Indecision app"
     ),
     React.createElement(
-        'p',
+        "p",
         null,
-        'checking the system'
+        "checking the system"
     ),
     React.createElement(
-        'ol',
+        "ol",
         null,
         React.createElement(
-            'li',
+            "li",
             null,
-            'one'
+            "one"
         ),
         React.createElement(
-            'li',
+            "li",
             null,
-            'two'
+            "two"
         )
     )
-); //not part of js and browser can't understand.so,this have to be converted into JS
+);
 
-//assignement
+//Dynamic 
+var userName = "Diksha Dhote";
+var userAge = 23;
+var userLocation = "Mumbai";
 var templateTwo = React.createElement(
-    'div',
+    "div",
     null,
     React.createElement(
-        'h1',
+        "h1",
         null,
-        'Diksha Dhote'
+        userName
     ),
     React.createElement(
-        'p',
+        "p",
         null,
-        'Age : 22'
+        "Age : ",
+        userAge
     ),
     React.createElement(
-        'p',
+        "p",
         null,
-        'Location : Nagpur'
+        "Location : ",
+        userLocation
     )
 );
 var appRoot = document.getElementById('app');

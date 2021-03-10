@@ -9,15 +9,18 @@ var template=
         <li>two</li>
     </ol>
 </div>
-); //not part of js and browser can't understand.so,this have to be converted into JS
+); 
 
-//assignement
+//Dynamic 
+var userName ="Diksha Dhote";
+var userAge=23;
+var userLocation="Mumbai";
 var templateTwo=
 (
 <div>
-<h1>Diksha Dhote</h1>
-<p>Age : 22</p>
-<p>Location : Nagpur</p>
+<h1>{userName}</h1>
+<p>Age : {userAge}</p>
+<p>Location : {userLocation}</p>
 </div>
 );
 var appRoot=document.getElementById('app');
